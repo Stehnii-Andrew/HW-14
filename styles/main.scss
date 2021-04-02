@@ -1,0 +1,255 @@
+@import "./logo.css";
+@import "./close.css";
+
+@font-face {
+    src: url('/fonts/TrainOne-Regular.ttf');
+    font-family: 'Train One';
+}
+
+@font-face {
+    src: url('/fonts/Oswald-Regular.ttf');
+    font-family: 'Oswald';
+}
+
+@font-face {
+    src: url('/fonts/Oswald-Light.ttf');
+    font-family: 'Oswald-light';
+}
+
+@font-face {
+    src: url('/fonts/Arimo-Bold.ttf');
+    font-family: 'Arimo-bold';
+}
+
+@font-face {
+    src: url('/fonts/Arimo-Regular.ttf');
+    font-family: 'Arimo';
+}
+
+@keyframes load {
+    0% {
+        left: 1920px;
+        top: 60px;
+    }
+
+    100% {
+        left: 200px;
+        top: 100px;
+    }
+}
+
+@keyframes load-header {
+    0% {
+        position: absolute;
+        top: -100px;
+    }
+
+    100% {
+        position: absolute;
+        top: 0px;
+    }
+}
+
+@keyframes add {
+    0% {
+        border: red 10px solid;
+    }
+
+    100% {
+        border: yellow 10px solid;
+    }
+}
+
+body {
+    background-image: url('/img/background.jpg');
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background-color: #2b2b2b;
+    animation: load-header 1.5s ease 1;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 67px;
+        width: 20%;
+        border-right: #3d3d3d solid 2px;
+        color: white;
+        
+
+        .shop {
+            font-family: 'Train One'; 
+        }
+    }
+
+    .option {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #4c4c4c;
+        width: 13.33%;
+        border-right: #3d3d3d solid 2px;
+        font-family: 'Oswald';
+        text-decoration: none;
+
+        &:hover {
+            color: white;
+            transition: 0.3s;
+        }
+    }
+}
+
+.container {
+    position: absolute;
+    left: 200px;
+    width: 1520px;
+    height: 842px;
+    background-color: #3d3d3d;
+    animation: load 2s ease 1;
+    color: white;
+    font-family: 'Oswald';
+    
+
+    .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        font-size: 25px;
+    }
+
+    hr {
+        background-color: #7d7d7d;
+        height: 2px;
+        width: 80%;
+        border: none;
+    }
+
+    p {
+        font-family: 'Oswald-light';
+        font-size: 19px;
+        margin: 30px;
+    }
+}
+
+.show {
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    width: 140px;
+    height: 60px;
+    font-family: 'Oswald';
+    background-color: #2b2b2b;
+    color: white;
+    border: 2px solid #3d3d3d;
+
+    &:focus {
+        border: none;
+        outline: none;    
+    }
+}
+
+.none {
+    display: none;
+}
+
+.add {
+    position: absolute;
+    left: 410px;
+    top: 80px;
+    z-index: 100;
+    width: 1000px;
+    height: 700px;
+    background-color: rgb(9, 9, 129);
+    border: white solid 10px;
+    border-radius: 20px;
+    animation: add 0.2s linear infinite;
+
+    .close {
+        position: absolute;
+        top: -20px;
+        left: 980px;
+        width: 40px;
+        height: 40px;
+        z-index: 200;
+        background-color: red;
+        color: white;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Arimo-bold';
+        font-size: 120px;
+        -webkit-text-stroke: 3px #ffffff;
+        color: red;
+    }
+
+    .reg {
+        left: 100px;
+        top: 300px;
+        position: absolute;
+        width: 800px;
+        height: 300px;
+        background: yellow;
+        border: solid 20px brown;
+        font-size: 40px;
+        font-family: 'Arimo-bold';
+    }
+
+    .donate {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Oswald';
+        color: white;
+    
+        .close-donate {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 40px;
+            height: 40px;
+            z-index: 200;
+            background-color: red;
+            color: white;
+            border: none;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+.blur {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+}
+
